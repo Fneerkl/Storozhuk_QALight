@@ -1,0 +1,50 @@
+https://book-ye.com.ua/
+uvofinderr+@gmail.com
+Uvoteam1!
+
+sign up
+1. "Увійти або Зареєструватися"  button   .//span[@class='header-bottom__login-txt' and contains(text(), 'Увійти або Зареєструватися')]
+2.  "Зареєструватися" button              .//*[@class="auth-popup__bottom-link login-to-register"]
+3.  ваше і"мя field                       .//input[@name="REGISTER[NAME]"]
+4.  ваша пошта field                     .//input[@name="REGISTER[EMAIL]"]
+5.  телефон field                        .//input[@name="REGISTER[PERSONAL_PHONE]"]
+6.  пароль field                         .//input[@name="REGISTER[PASSWORD]"]
+7.  Погоджуюсь з умовами використання    .//input[(@type="checkbox")and not(@value="Y")]
+8.  "Зареєструватись" button             .//input[(@type='submit') and (@value='Зареєструватись')]
+
+assert
+1.  Welcome message exists               .//span[@class='header-bottom__login-txt' and contains(text()[2], 'NAME')]
+
+login
+1. "Увійти або Зареєструватися"  button   .//span[@class='header-bottom__login-txt' and contains(text(), 'Увійти або Зареєструватися')]
+2. ваша пошта або телефон field           .//input[@name="USER_LOGIN"]
+3. пароль field                           .//input[@name="USER_PASSWORD"]
+4. "Увійти" button                        .//input[(@type='submit') and (@value='Увійти')]
+
+assert
+1.  Welcome message exists               .//span[@class='header-bottom__login-txt' and contains(text()[2], 'NAME')]
+
+Added to basket
+1. "Каталог товарів" dropdown menu     .//*[@class='header__catalog-btn' and contains(text(), 'Каталог товарів')]
+2. "Дитяча література" button          .//*[@class='ctlg-left__link' and contains(text(), 'Дитяча література')]
+3.  "купити" button                   .//*[@class='product__btn-text' and contains(text(), 'Купити')]
+4. "оформити замовлення" button       .//*[@class='modal-content__btn-secondary btn--broad btn--active pull-right button' and contains(text(), 'Оформити замовлення')]
+
+expected result:
+In header change number of items in Cart on 1    .//*[@class='header-bottom__basket-quant' and contains(text(), '1')]
+
+
+plus items in Cart
+button +                            .//*[@class='number-picker__btn number-picker__btn--plus' and contains(text(), '+')]
+Cart+1                            .//input[(@type='text') and (@value='2')]
+total price                         .//*[@class='text-right total__result' and @id='order-total-sum']
+price of item                       .//*[@class='products__price products__price--new fake_price']
+
+
+delete button                                      .//*[@class='products__delete-text' and contains(text(), 'Видалити')]
+text Натисніть тут, щоб продовжити покупки        .//*[@class='bx-soa-empty-cart-text' and contains(text(), 'Ваш кошик порожній')]
+button "Натисніть тут, щоб продовжити покупки"    //a[@href='/' and contains(text(), 'Натисніть тут, щоб продовжити покупки')]
+
+
+
+

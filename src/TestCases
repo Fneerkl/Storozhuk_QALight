@@ -1,0 +1,58 @@
+TC001
+sign up
+1. click on "Увійти або Зареєструватися"  button
+2. Click on "Зареєструватися"
+3. enter Olesia in ваше і"мя field
+4. enter  uvofinderr+3@gmail.com in ваша пошта field
+5. enter +380997144888 in телефон field
+6. enter Uvoteam1!  in пароль field
+7. tick checkbox in Погоджуюсь з умовами використання
+8. click on "Зареєструватись" button
+
+expected result:
+In header change logo on your name (і"мя field)
+
+TC002
+Log In
+1. click on "Увійти або Зареєструватися"  button
+2. Enter your email in ваша пошта або телефон field
+3. Enter your password in пароль field
+4. click on "Увійти" button
+
+expected result:
+In header change logo on your name (і"мя field)
+
+TC003
+Added to Cart
+1. click on "Каталог товарів" dropdown menu
+2. click on "Дитяча література" button
+3. click on  "купити" button first book in list
+4. click on "оформити замовлення" button
+5. if you see modal window click on "close" button
+
+expected result:
+In header change number of items in Cart on 1
+and link https://book-ye.com.ua/personal/order/make/ is opened
+and pay is more than 0 in Cart
+
+
+TC004
+change item order in Cart
+TC003 +
+6. click 2 times on plus button in Cart
+
+Expected result:
+items in Cart +1
+pay in Cart = price of item * 2
+
+TC005
+delete item from Cart
+TC003 +
+6. click on delete button in Cart
+
+Expected result:
+your Cart is empty
+your see text "Ваш кошик порожній" and button "Натисніть тут, щоб продовжити покупки"
+
+
+
