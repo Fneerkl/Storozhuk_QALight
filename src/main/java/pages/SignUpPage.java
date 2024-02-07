@@ -53,7 +53,6 @@ public class SignUpPage extends ParentPage {
         if (status != checkboxAgree.isSelected()) {
             checkboxAgree.click();
         }
-
         return this;
     }
 }

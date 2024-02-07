@@ -33,13 +33,12 @@ public class CartPage extends PageBookEy {
         clickOnElement(increaseItemsButton);
         return this;
     }
-    public double getItemCartPrice()
-    {
+
+    public double getItemCartPrice() {
         return getPriceDouble(getTextInElement(itemPrice));
     }
 
-    public double getTotalCartPrice()
-    {
+    public double getTotalCartPrice() {
         return getPriceDouble(getTextInElement(totalPrice));
     }
 
@@ -47,8 +46,7 @@ public class CartPage extends PageBookEy {
         return getAttributeInElement(numberCartItemsLabel, "value");
     }
 
-    private double getPriceDouble(String priceMsg)
-    {
+    private double getPriceDouble(String priceMsg) {
         return Double.parseDouble(priceMsg.replace(" грн", ""));
     }
 

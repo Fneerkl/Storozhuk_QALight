@@ -19,7 +19,7 @@ public class WebElementHelper {
 
     public WebElementHelper(WebDriver webDriver) {
         this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this); // initialize all elements
+        PageFactory.initElements(webDriver, this);
         webDriverWait05 = new WebDriverWait(webDriver, Duration.ofSeconds(ConfigProvider.configProperties.TIME_FOR_DEFAULT_WAIT()));
         webDriverWait15 = new WebDriverWait(webDriver, Duration.ofSeconds(ConfigProvider.configProperties.TIME_FOR_EXPLICIT_WAIT_LOW()));
     }
@@ -33,6 +33,7 @@ public class WebElementHelper {
             printErrorAndStopTest(e);
         }
     }
+
     private String getElementName(WebElement webElement) {
         try {
             return webElement.getAccessibleName();
@@ -40,6 +41,7 @@ public class WebElementHelper {
             return null;
         }
     }
+
     private void printErrorAndStopTest(Exception e) {
         logger.error("Can not work with element " + e);
         Assert.fail("Can not work with element " + e);
@@ -79,8 +81,7 @@ public class WebElementHelper {
         return null;
     }
 
-    protected Boolean waitElementExists(String xpath, int waitSeconds)
-    {
+    protected Boolean waitElementExists(String xpath, int waitSeconds) {
         try {
             Wait<WebDriver> wait =
                     new FluentWait<>(webDriver)
@@ -96,8 +97,7 @@ public class WebElementHelper {
         }
     }
 
-    protected Boolean waitElementDisappear(WebElement element, int waitSeconds)
-    {
+    protected Boolean waitElementDisappear(WebElement element, int waitSeconds) {
         try {
             Wait<WebDriver> wait =
                     new FluentWait<>(webDriver)
@@ -107,8 +107,7 @@ public class WebElementHelper {
 
             wait.until(ExpectedConditions.invisibilityOf(element));
             return true;
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             return false;
         }
     }

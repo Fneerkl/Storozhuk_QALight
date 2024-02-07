@@ -14,7 +14,6 @@ public class CartTest extends BaseSeleniumTest {
         pageProvider.pageBookEy().clickOnBuyButton();
         pageProvider.cartPage().clickOnSettleOrderButton();
 
-        //Assert
         Assert.assertEquals("1", pageProvider.pageBookEy().getCartLabelText());
     }
 
@@ -29,12 +28,11 @@ public class CartTest extends BaseSeleniumTest {
         //wait until calculation completed
         Thread.sleep(2000);
 
-        //Assert
-        Assert.assertEquals("2",  pageProvider.cartPage().getNumberOfItemsInCart());
+        Assert.assertEquals("2", pageProvider.cartPage().getNumberOfItemsInCart());
         double itemPrice = pageProvider.cartPage().getItemCartPrice();
         double totalPrice = pageProvider.cartPage().getTotalCartPrice();
 
-        Assert.assertEquals(totalPrice, itemPrice*2, 0);
+        Assert.assertEquals(totalPrice, itemPrice * 2, 0);
     }
 
     @Test

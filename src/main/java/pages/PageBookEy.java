@@ -29,7 +29,6 @@ public class PageBookEy extends ParentPage {
             logger.error("Can not open Sign Up Page");
             Assert.fail("Can not open Sign Up Page");
         }
-
         return this;
     }
 

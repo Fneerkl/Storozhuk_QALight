@@ -16,7 +16,6 @@ public class SignInTest extends BaseSeleniumTest {
         pageProvider.signInPage().enterPassword(VALID_PASSWORD_UI);
         pageProvider.signInPage().clickOnSignInButton();
 
-        //Assert
         Assert.assertTrue("Welcome message didn't appear", pageProvider.pageBookEy().waitWelcomeMessage(VALID_NAME_UI, 5));
     }
 }

@@ -6,7 +6,6 @@ import org.junit.Test;
 
 import static data.TestData.*;
 
-
 public class SignUpTest extends BaseSeleniumTest {
 
     @Test
@@ -22,8 +21,6 @@ public class SignUpTest extends BaseSeleniumTest {
         pageProvider.signUpPage().tickAgreementCheckbox(true);
         pageProvider.signUpPage().clickOnSignUpButton();
 
-
-        //Assert
         Assert.assertTrue("Welcome message didn't appear", pageProvider.pageBookEy().waitWelcomeMessage(VALID_NAME_UI, 30));
     }
 }
