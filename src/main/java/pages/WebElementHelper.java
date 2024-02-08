@@ -81,7 +81,7 @@ public class WebElementHelper {
         return null;
     }
 
-    protected Boolean waitElementExists(String xpath, int waitSeconds) {
+    protected boolean waitElementExists(String xpath, int waitSeconds) {
         try {
             Wait<WebDriver> wait =
                     new FluentWait<>(webDriver)
@@ -97,7 +97,7 @@ public class WebElementHelper {
         }
     }
 
-    protected Boolean waitElementDisappear(WebElement element, int waitSeconds) {
+    protected boolean waitElementDisappear(WebElement element, int waitSeconds) {
         try {
             Wait<WebDriver> wait =
                     new FluentWait<>(webDriver)

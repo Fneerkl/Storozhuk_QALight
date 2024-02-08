@@ -41,7 +41,7 @@ public class PageBookEy extends ParentPage {
         return getTextInElement(cartLabel);
     }
 
-    public Boolean waitWelcomeMessage(String name, int waitSeconds) {
+    public boolean waitWelcomeMessage(String name, int waitSeconds) {
         String welcomeMsgXPath = String.format(".//span[@class='header-bottom__login-txt' and contains(text()[2], '%s')]", name);
         return waitElementExists(welcomeMsgXPath, waitSeconds);
     }

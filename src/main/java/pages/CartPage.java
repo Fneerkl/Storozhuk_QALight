@@ -55,7 +55,7 @@ public class CartPage extends PageBookEy {
         return this;
     }
 
-    public Boolean waitCartModalDisappear() {
+    public boolean waitCartModalDisappear() {
         return waitElementDisappear(cartModalWindow, 5);
     }
 

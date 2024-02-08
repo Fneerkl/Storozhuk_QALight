@@ -43,7 +43,6 @@ public class CartTest extends BaseSeleniumTest {
         pageProvider.pageBookEy().clickOnBuyButton();
         pageProvider.cartPage().clickOnDeleteButton();
 
-        //Assert
         Assert.assertTrue("Cart modal window wasn't closed", pageProvider.cartPage().waitCartModalDisappear());
     }
 }
